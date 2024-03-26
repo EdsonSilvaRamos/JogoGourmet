@@ -1,0 +1,64 @@
+JogoGourmet
+
+> Ser feito em Windows forms
+> Regras e funcionalidades:
+
+> Apresentar uma mensagem: "Pense em um prato que gosta" com OK;
+	> Seguir com uma nova mensagem "O prato que você pensou é massa?" com Sim e Não
+		> Se sim: 
+			> Apresentar uma pergunta: "O Prato que você pensou é Lasanha?" com Sim e Não.
+				> Se Sim:							
+					> Finalizar com a mensagem "Acertei de novo!" com Ok e volta para a tela principal
+				> Se Não:								
+					> Apresentar uma pergunta: "Qual o prato você pensou?" com caixa de texto para o usuário digitar e com os botões Ok e Cancelar 
+					(Se der tempo criar uma validação para o texto)							
+						> Se OK com a resposta:
+							Esse novo prato deve ser adicionado a uma lista de pratos
+							> Apresenta uma nova mensagem: "'Prato' é ____ mas 'Prato anterior' não." com caixa de texto para o usuário digitar o tipo de prato e com os botões Ok e Cancelar
+							(Se der tempo criar uma validação para o texto)								
+								> Se OK após digitar o tipo, finaliza e volta para a tela principal 
+									> Esse tipo deve ser adicionada à lista de pratos linkando o prato adicionado, para quando as perguntas sobre os pratos forem Não, ir apresentando as mensagens até finalizar.
+								> Se Cancela volta para a tela principal
+						> Se Cancela volta para a tela principal
+		> Se não:
+			> Apresentar uma nova pergunta: "O prato que você pensou é Bolo de Chocolate?" com Sim e Não
+				> Se sim
+					> Finalizar com a mensagem "Acertei de novo!" com Ok e volta para a tela principal
+				> Se Não
+					> Retomar o processo em que é perguntado qual o prato pensado.
+					
+Tasks:
+
+- Criar estrutura em camadas:
+	0-Dominio, 1-Infraestrutura, 2-Apresentacao, 3-Utils
+	
+- Criar camada Domínio:
+
+0-Dominio:
+	> Entidades
+		> Prato:
+			> Nome
+			> Tipo
+	> Interfaces
+		> IPratoRepository:
+			> AdicionaPrato
+	> Services
+		> PratoService
+			> AdicionaPrato
+	
+- Criar camada Apresentacao:
+	
+1-Apresentacao:
+	> WindowsForms:
+		> Adicionar as regras e condições de inserção dos pratos ou não e apresentar as telas com as perguntas
+		> frmTelaPrincipal
+		> frmTelaPergunta (texto, botões Sim e Não)
+		> frmTelaPerguntaResposta (texto, inputText, botões Ok e Cancelar)
+		
+- Criar camada Utils:
+		
+2-Utils:
+	> TextosAuxiliares
+		> Métodos com retorno de strings para apresentar nas telas
+		
+		
