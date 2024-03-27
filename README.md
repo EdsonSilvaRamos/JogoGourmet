@@ -33,5 +33,6 @@ Jogo de perguntas e respostas sobre o prato em que está se pensando, em que o s
 
 ## Para gerar o arquivo executável:
 - Seguir os mesmos passos acima, porém mudar o modo de execução para release;
-- O arquivo executável estará na pasta: ~\JogoGourmet\JogoGourmet.Apresentacao\bin\Release >> "JogoGourmet.Apresentacao.exe"
+- O arquivo executável estará na pasta: ~\JogoGourmet\JogoGourmet.Apresentacao\bin\Release
+- Executável >> "JogoGourmet.Apresentacao.exe"
  
